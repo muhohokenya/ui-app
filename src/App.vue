@@ -6,7 +6,7 @@ const el = ref()
 onMounted(() => {
   axios.get("http://10.0.7.113/students").then(response=>{
     console.log(response.data)
-  }).catch(e)
+  });
 })
 </script>
 
