@@ -4,9 +4,10 @@ import axios from "axios";
 const el = ref()
 
 onMounted(() => {
-  axios.get("http://10.0.135.251:3000/students",{
+   axios.get("http://10.0.135.251:3000/students",{
     headers:{
       "Accept":"application/json",
+      "Content-Type":"application/json",
       'Access-Control-Allow-Origin': '*',
     }
   }).then(response=>{
