@@ -10,7 +10,7 @@ onMounted(() => {
       "Content-Type":"application/json"
     }
   }).then(response=>{
-    console.log(response.data)
+    console.log(response)
   });
 })
 </script>
