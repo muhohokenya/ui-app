@@ -4,7 +4,12 @@ import axios from "axios";
 const el = ref()
 
 onMounted(() => {
-  axios.get("http://10.0.135.251:3000/students").then(response=>{
+  axios.get("http://10.0.135.251:3000/students",{
+    headers:{
+      "Accept":"application/json",
+      "Content-Type":"application/json"
+    }
+  }).then(response=>{
     console.log(response.data)
   });
 })
