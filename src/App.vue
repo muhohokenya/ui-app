@@ -4,7 +4,7 @@ import axios from "axios";
 const el = ref()
 
 onMounted(() => {
-   axios.get("http://54.80.190.139/api/",{
+   axios.get("http://54.80.190.139/api",{
     headers:{
       "Accept":"application/json",
       "Content-Type":"application/json",
