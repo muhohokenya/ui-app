@@ -2,16 +2,17 @@
 import { ref, onMounted } from 'vue'
 import axios from "axios";
 const el = ref()
+const students = ref([]); // Initialize students ref
 
 onMounted(() => {
-   axios.get("http://54.80.190.139/api",{
+   axios.get("http://54.80.190.139/api/",{
     headers:{
       "Accept":"application/json",
       "Content-Type":"application/json",
       'Access-Control-Allow-Origin': '*',
     }
   }).then(response=>{
-    console.log(response)
+     students.value = response.data; // Store the response data in students ref
   }).catch(error=>{
      console.log(error)
    });
@@ -20,7 +21,12 @@ onMounted(() => {
 
 <template>
   <div>
-    hello public EC2
+    <h1>Students List</h1>
+    <ul>
+      <li v-for="student in students" :key="student.id">
+        Name: {{ student.name }}, Age: {{ student.age }}, Gender: {{ student.gender }}, Grade: {{ student.grade }}
+      </li>
+    </ul>
   </div>
 </template>
 
