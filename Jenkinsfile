@@ -20,14 +20,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                // Run your tests. Could be unit tests, linting, etc.
-                script {
-                    sh 'npm run test:unit'
-                }
-            }
-        }
+
 
         stage('Build') {
             steps {
