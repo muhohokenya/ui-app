@@ -3,7 +3,6 @@ pipeline {
 
    tools {
      nodejs "node"
-     docker "docker"
    }
 
     stages {
@@ -37,7 +36,7 @@ pipeline {
                 stage('Build Docker Image') {
                     steps {
                         script {
-                          sh "docker --help"
+                          docker.build("muhohoweb/hellonode")
 
                         }
                     }
