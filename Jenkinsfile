@@ -35,12 +35,7 @@ pipeline {
         // Adding a Docker build stage
                 stage('Build Docker Image') {
                     steps {
-                        script {
-                         withDockerContainer('') {
-                             sh 'docker --help'
-                         }
-
-                        }
+                        docker.build("muhohoweb/hello")
                     }
                 }
 
