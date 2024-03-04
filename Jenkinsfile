@@ -36,7 +36,9 @@ pipeline {
                 stage('Build Docker Image') {
                     steps {
                         script {
-                          sh '/usr/local/bin/docker build -t muhohoweb/hellonode .'
+                         withDockerContainer('') {
+                             sh 'docker --help'
+                         }
 
                         }
                     }
