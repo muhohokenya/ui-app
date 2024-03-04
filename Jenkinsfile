@@ -31,6 +31,18 @@ pipeline {
             }
         }
 
+        // Adding a Docker build stage
+                stage('Build Docker Image') {
+                    steps {
+                        script {
+                            // Assuming you have a Dockerfile in the root directory of your project
+                            // Replace 'your-image-name' with the desired Docker image name
+                            // Replace 'your-tag' with the desired tag for the image
+                            docker.build('your-image-name:your-tag')
+                        }
+                    }
+                }
+
         // Optional: Add additional stages for deployment if needed
         stage('Deploy') {
             steps {
