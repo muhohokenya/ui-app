@@ -34,10 +34,8 @@ pipeline {
                 stage('Build Docker Image') {
                     steps {
                         script {
-                            // Assuming you have a Dockerfile in the root directory of your project
-                            // Replace 'your-image-name' with the desired Docker image name
-                            // Replace 'your-tag' with the desired tag for the image
-                            docker.build('your-image-name:your-tag')
+                          sh "docker --help"
+
                         }
                     }
                 }
