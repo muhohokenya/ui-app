@@ -1,10 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        // Define your NodeJS installation name configured in Jenkins Global Tool Configuration
-        NODEJS_HOME = "${tool 'NodeJS_12.x'}"
-        PATH = "${env.NODEJS_HOME}/bin:${env.PATH}"
+    tools{
+       nodejs "21.6.2"
     }
 
     stages {
