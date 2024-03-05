@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import axios from "axios";
 const el = ref()
-const students = ref([]); // Initialize students ref
+const students = ref([]);
 onMounted(() => {
    axios.get("http://52.203.160.83/api/students",{
     headers:{
