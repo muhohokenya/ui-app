@@ -10,7 +10,6 @@ onMounted(() => {
       "Content-Type":"application/json",
       'Access-Control-Allow-Origin': '*',
     }
-
   }).then(response=>{
      students.value = response.data; // Store the response data in students ref
   }).catch(error=>{
