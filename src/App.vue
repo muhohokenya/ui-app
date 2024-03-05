@@ -5,7 +5,7 @@ const el = ref()
 const students = ref([]); // Initialize students ref
 
 onMounted(() => {
-   axios.get("http://34.228.229.24/api/students",{
+   axios.get("http://52.203.160.83/api/students",{
     headers:{
       "Accept":"application/json",
       "Content-Type":"application/json",
